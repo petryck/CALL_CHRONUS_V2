@@ -48,8 +48,32 @@ Session Name: i9DevGroup
 
         
         if(SessionInfo['name'] == data.session){
-            message.html(data)
+
+            if(data.status == 'isLogged'){
+                message.html('Você está logado!')
+            }else if(data.status == 'notLogged'){
+                message.html('É necessário escanear o código QRCODE!')  
+            }else if(data.status == 'qrReadSuccess'){
+                message.html('Leitura do QRCODE correta!')  
+            }else if(data.status == 'qrReadFail'){
+                message.html('Tivemos problemas ao tentar ler o QRCODE!')  
+            }else if(data.status == 'autocloseCalled'){
+                message.html('Se passou muito tempo para a tentativode de leitura, tente novamente.')  
+            }else if(data.status == 'desconnectedMobile'){
+                message.html('QRCODE foi desconectado do dispositivo!')  
+            }else if(data.status == 'deviceNotConnected'){
+                message.html('Bate-papo não disponível porque o telefone está desconectado (tentando se conectar ao telefone)')  
+            }else if(data.status == 'isConnected'){
+                message.html('Você ja está conectado!')  
+            }else if(data.status == 'NoStopSession'){
+                message.html('Não existe sessão para encerrar')  
+            }
+
+
+            
+            
         }
+
        })
 
 

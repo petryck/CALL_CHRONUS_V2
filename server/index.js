@@ -62,7 +62,7 @@ function createSession(session){
         io.emit('SessionStatus',saida_qrcode);
         console.log('Status Session: ', statusSession); 
         }
-        
+
         )
       .then((retorno) => {
         start(retorno,session);
@@ -147,10 +147,9 @@ io.on('connection', (socket) => {
             createSession(session)
            
         }else{
-            var body = {
-                SessionName:session,
-                SessionStatus:'error'
-            };
+            var saida_qrcode = {status:'isConnected',session:session}
+
+            io.emit('SessionStatus',saida_qrcode);
         }
 
 
@@ -161,8 +160,32 @@ io.on('connection', (socket) => {
     });
 
 
-    
-    
+    socket.on('StopSession',function(data){
+ 
+        var session = data.name;
+
+        if(!client[session]){
+
+            var saida_qrcode = {status:'NoStopSession',session:session}
+
+            io.emit('SessionStatus',saida_qrcode);
+          
+        }else{
+            
+            // var saida_qrcode = {status:'isConnected',session:session}
+
+            // io.emit('SessionStatus',saida_qrcode);
+        }
+
+
+        socket.emit('StatusServer',body);
+
+       
+
+    });
+
+
+
     
     socket.on('disconnect', () => {
         console.log('user disconnected');

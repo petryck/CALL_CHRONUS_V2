@@ -1,8 +1,17 @@
-2022/04/16-14:32:24.174 1368 Reusing MANIFEST C:\Users\PeeWi\Documents\GitHub\CALL_CHRONUS_V2\tokens\i9devgroup\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
-2022/04/16-14:32:24.174 1368 Recovering log #70
-2022/04/16-14:32:24.175 1368 Reusing old log C:\Users\PeeWi\Documents\GitHub\CALL_CHRONUS_V2\tokens\i9devgroup\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000070.log 
-2022/04/16-14:32:24.175 1368 Delete type=2 #66
-2022/04/16-14:32:24.175 1368 Delete type=2 #69
-2022/04/16-14:32:24.218 b84 Manual compaction at level-0 from '\x00\x11\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x12\x00\x00\x00' @ 0 : 0; will stop at (end)
-2022/04/16-14:32:24.219 1368 Manual compaction at level-0 from '\x00\x10\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x11\x00\x00\x00' @ 0 : 0; will stop at (end)
-2022/04/16-14:32:24.247 215c Manual compaction at level-0 from '\x00\x0f\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00\x10\x00\x00\x00' @ 0 : 0; will stop at (end)
+2022/04/16-14:45:22.346 14f4 Reusing MANIFEST C:\Users\PeeWi\Documents\GitHub\CALL_CHRONUS_V2\tokens\i9devgroup\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2022/04/16-14:45:22.346 14f4 Recovering log #143
+2022/04/16-14:45:22.348 14f4 Reusing old log C:\Users\PeeWi\Documents\GitHub\CALL_CHRONUS_V2\tokens\i9devgroup\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000143.log 
+2022/04/16-14:45:22.834 14f4 Compacting 1@0 + 2@1 files
+2022/04/16-14:45:22.907 14f4 Generated table #146@0: 161912 keys, 2349275 bytes
+2022/04/16-14:45:22.927 14f4 Generated table #147@0: 8189 keys, 1945510 bytes
+2022/04/16-14:45:22.927 14f4 Compacted 1@0 + 2@1 files => 4294785 bytes
+2022/04/16-14:45:22.928 14f4 compacted to: files[ 0 3 1 0 0 0 0 ]
+2022/04/16-14:45:22.928 14f4 Delete type=2 #139
+2022/04/16-14:45:22.928 14f4 Delete type=2 #140
+2022/04/16-14:45:22.928 14f4 Delete type=2 #144
+2022/04/16-14:47:34.442 2730 Compacting 1@1 + 1@2 files
+2022/04/16-14:47:34.475 2730 Generated table #148@1: 13106 keys, 1137698 bytes
+2022/04/16-14:47:34.475 2730 Compacted 1@1 + 1@2 files => 1137698 bytes
+2022/04/16-14:47:34.475 2730 compacted to: files[ 0 2 1 0 0 0 0 ]
+2022/04/16-14:47:34.475 2730 Delete type=2 #73
+2022/04/16-14:47:34.475 2730 Delete type=2 #146
