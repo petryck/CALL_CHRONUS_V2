@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <title>Painel</title>
+</head>
+<body>
+
+Session Name: i9DevGroup
+<br>
+<img id="qr_code" style="width: 225px;height: 203px;" src="https://creazilla-store.fra1.digitaloceanspaces.com/emojis/46217/mobile-phone-off-emoji-clipart-md.png" alt="">
+<br>
+<div class="message"></div>
+<br>
+<button onclick="StartSession()">Start</button>
+<button>Stop</button>
+<button>Restart</button>
+
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+       var message = $('.message');
+ 
+       
+
+       var socket = io(); 
+       var userAdm = {}
+       var SessionInfo = {
+           id:1,
+           name:'i9devgroup'
+       }
+
+       
+
+       socket.emit('NewConnectionADM', userAdm);
+
+
+       function StartSession(){
+        socket.emit('StartSession', SessionInfo);
+       }
+
+       socket.on('SessionStatus',function(data){
+
+        
+        if(SessionInfo['name'] == data.session){
+            message.html(data)
+        }
+       })
+
+
+       socket.on('qrCode',function(data){
+        
+        if(SessionInfo['name'] == data.session){
+            $('#qr_code').attr('src', data.code64)
+        }
+
+       })
+
+       
+
+       
+    </script>
+</body>
+</html>
